@@ -74,17 +74,20 @@ function App() {
 
             <div className="flex justify-center items-center w-full pb-10 gap-5">
                 <BrowserRouter>
-                    <Link to="/accessability" className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
+                    <Link to="\opening-times"
+                          className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                         <FontAwesomeIcon icon={faClock} className="fa-xl pr-5"/>
                         <div className="text-xl">Open from 10am</div>
                     </Link>
 
-                    <Link to="/accessability" className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
+                    <Link to="/accessability"
+                          className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                         <FontAwesomeIcon icon={faPerson} className="fa-xl pr-5"/>
                         <div className="text-xl">Accessibility</div>
                     </Link>
 
-                    <Link to="/accessability" className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
+                    <Link to="/information"
+                          className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                         <FontAwesomeIcon icon={faInfoCircle} className="fa-xl pr-5"/>
                         <div className="text-xl">Information</div>
                     </Link>
@@ -97,15 +100,56 @@ function App() {
 
             <div className="w-full grid grid-cols-1 md:grid-cols-3 pl-[10%] pr-[10%] place-items-center">
                 {animals.map((animal, index) => (
-                    <div className="w-[80%] rounded-xl shadow-xl bg-background-secondary text-white hover:scale-105 hover:shadow-2xl duration-200 m-5">
+                    <div
+                        className="w-[80%] rounded-xl shadow-xl bg-background-secondary text-white hover:scale-105 hover:shadow-2xl duration-200 m-5">
                         <img src={animal.image} className="rounded-t-xl w-full"/>
 
                         <h2 className="text-5xl p-4">{animal.title}</h2>
 
                         <div className="p-3 text-xl">{animal.description}</div>
                     </div>
-                    ))}
+                ))}
             </div>
+
+            <h2 id="opening-times" className="text-7xl p-7">
+                Opening times
+            </h2>
+
+            <table className="table-fixed w-full text-left mr-[15%] ml-[15%] w-[70%] ">
+                <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Opening</th>
+                    <th>Last Entry</th>
+                    <th>Closing</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr className="hover:backdrop-brightness-90 duration-200">
+                    <td>Monday-Friday</td>
+                    <td>10am</td>
+                    <td>3:30pm</td>
+                    <td>5pm</td>
+                </tr>
+                <tr className="hover:backdrop-brightness-90 duration-200">
+                    <td>Saturday</td>
+                    <td>9am</td>
+                    <td>4:30pm</td>
+                    <td>6pm</td>
+                </tr>
+                <tr className="hover:backdrop-brightness-90 duration-200">
+                    <td>Sunday</td>
+                    <td>9am</td>
+                    <td>4:30pm</td>
+                    <td>6pm</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <h2 id="opening-times" className="text-7xl p-7">
+                Our location
+            </h2>
 
             <Footer/>
 
@@ -192,7 +236,7 @@ function App() {
             {/*</div>*/}
         </header>
     </div>
-);
+  );
 }
 
 export default App;
