@@ -36,21 +36,21 @@ function App() {
             </div>
 
             <div className="flex justify-center items-center w-full pb-10 gap-5">
-                <div className="bg-primary text-white text-background w-96 p-5 rounded-xl hover:bg-primary-400 duration-200">
+                <div className="bg-primary text-white text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                     <div className="flex justify-center items-center">
                         <FontAwesomeIcon icon={faClock} className="fa-xl pr-5"/>
                         <div className="text-xl">Open from 10am</div>
                     </div>
                 </div>
 
-                <div className="bg-primary text-white text-background w-96 p-5 rounded-xl hover:bg-primary-400 duration-200">
+                <div className="bg-primary text-white text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                     <div className="flex justify-center items-center">
                         <FontAwesomeIcon icon={faPerson} className="fa-xl pr-5"/>
                         <div className="text-xl">Accessibility</div>
                     </div>
                 </div>
 
-                <div className="bg-primary text-white w-96 p-5 rounded-xl hover:bg-primary-400 duration-200">
+                <div className="bg-primary text-white w-96 p-5 rounded-xl hover:scale-105 duration-200">
                     <div className="flex justify-center items-center">
                         <FontAwesomeIcon icon={faInfoCircle} className="fa-xl pr-5"/>
                         <div className="text-xl">Information</div>
