@@ -117,33 +117,32 @@ function App() {
 
             <table className="table-fixed text-left mx-[15%] w-[70%] ">
                 <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Opening</th>
-                    <th>Last Entry</th>
-                    <th className="w-24">Closing</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr className="hover:backdrop-brightness-90 duration-200">
-                    <td>Monday-Friday</td>
-                    <td>10am</td>
-                    <td>3:30pm</td>
-                    <td className="w-fit">5pm</td>
-                </tr>
-                <tr className="hover:backdrop-brightness-90 duration-200">
-                    <td>Saturday</td>
-                    <td>9am</td>
-                    <td>4:30pm</td>
-                    <td className="w-fit">6pm</td>
-                </tr>
-                <tr className="hover:backdrop-brightness-90 duration-200">
-                    <td>Sunday</td>
-                    <td>9am</td>
-                    <td>4:30pm</td>
-                    <td className="w-fit">6pm</td>
-                </tr>
-
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening</th>
+                        <th>Last Entry</th>
+                        <th className="w-24">Closing</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr className="hover:backdrop-brightness-90 duration-200">
+                        <td>Monday-Friday</td>
+                        <td>10am</td>
+                        <td>3:30pm</td>
+                        <td>5pm</td>
+                    </tr>
+                    <tr className="hover:backdrop-brightness-90 duration-200">
+                        <td>Saturday</td>
+                        <td>9am</td>
+                        <td>4:30pm</td>
+                        <td>6pm</td>
+                    </tr>
+                    <tr className="hover:backdrop-brightness-90 duration-200">
+                        <td>Sunday</td>
+                        <td>9am</td>
+                        <td>4:30pm</td>
+                        <td>6pm</td>
+                    </tr>
                 </tbody>
             </table>
 
