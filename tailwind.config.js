@@ -31,6 +31,7 @@ module.exports = {
       'background-secondary': '#253B38',
       'black': '#111111',
       'white': '#ffffff',
+      'gray': '#b6b6b6'
     }
   },
   plugins: [],

@@ -51,7 +51,7 @@ function App() {
 
 
             <div className="bg-fixed bg-cover bg-center h-[75vh] bg-[url('.//images/meercat.jpg')] font-DM">
-                <div className="h-full flex items-center justify-center text-black text-8xl pl-[45%] text-right">
+                <div className="h-full flex items-center justify-center text-black text-8xl md:pl-[45%] text-right">
                     <div className="grid">
                         <div className="font-fancy">
                             Discover
@@ -72,7 +72,7 @@ function App() {
 
             </div>
 
-            <div className="flex justify-center items-center w-full pb-10 gap-5">
+            <div className="flex justify-center items-center w-full pb-10 gap-5 flex-col md:flex-row">
                 <BrowserRouter>
                     <Link to="\opening-times"
                           className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
@@ -115,13 +115,13 @@ function App() {
                 Opening times
             </h2>
 
-            <table className="table-fixed w-full text-left mr-[15%] ml-[15%] w-[70%] ">
+            <table className="table-fixed text-left mx-[15%] w-[70%] ">
                 <thead>
                 <tr>
                     <th>Day</th>
                     <th>Opening</th>
                     <th>Last Entry</th>
-                    <th>Closing</th>
+                    <th className="w-24">Closing</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -129,27 +129,27 @@ function App() {
                     <td>Monday-Friday</td>
                     <td>10am</td>
                     <td>3:30pm</td>
-                    <td>5pm</td>
+                    <td className="w-fit">5pm</td>
                 </tr>
                 <tr className="hover:backdrop-brightness-90 duration-200">
                     <td>Saturday</td>
                     <td>9am</td>
                     <td>4:30pm</td>
-                    <td>6pm</td>
+                    <td className="w-fit">6pm</td>
                 </tr>
                 <tr className="hover:backdrop-brightness-90 duration-200">
                     <td>Sunday</td>
                     <td>9am</td>
                     <td>4:30pm</td>
-                    <td>6pm</td>
+                    <td className="w-fit">6pm</td>
                 </tr>
 
                 </tbody>
             </table>
 
-            <h2 id="opening-times" className="text-7xl p-7">
-                Our location
-            </h2>
+            {/*<h2 id="opening-times" className="text-7xl p-7">*/}
+            {/*    Our location*/}
+            {/*</h2>*/}
 
             <Footer/>
 
