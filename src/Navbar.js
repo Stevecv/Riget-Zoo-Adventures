@@ -60,10 +60,12 @@ const Navbar = () => {
                    onClick={toggleOpen}>Hotel booking</a>
                 <a href="#our-animals" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Our Animals</a>
+
                 <a href="/login" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Login</a>
                 <a href="/sign-up" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Sign up</a>
+
                 <a href="#" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Tickets</a>
             </Menu>

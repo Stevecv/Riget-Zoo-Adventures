@@ -2,6 +2,8 @@ import InputField from "./components/InputField";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import {useState} from "react";
+import App from "./App";
+import UserProfile from "./UserProfile";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -29,9 +31,13 @@ export default function Login() {
             if (!response.ok) {
                 const errorData = await response.json();
                 setError(errorData.detail || 'Error logging in');
+                console.log(errorData.detail || 'Error logging in')
                 return;
             }
             const result = await response.json();
+
+            UserProfile.setEmail(email);
+            UserProfile.setPassword(password);
             console.log('User logged in successfully:', result);
         } catch (error) {
             console.error('Error:', error);
@@ -51,7 +57,8 @@ export default function Login() {
                         </div>
 
                         <form onSubmit={handleSubmit}>
-                            <InputField id="email" label="Email Address" placeholder="someone@example.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <InputField id="email" label="Email Address" placeholder="someone@example.com" type="email"
+                                        value={email} onChange={(e) => setEmail(e.target.value)}/>
                             <InputField
                                 id="password"
                                 label="Password"
@@ -66,14 +73,20 @@ export default function Login() {
                                 Don't have an account? <a href="/register" className="text-[#0000ee]">Register</a>
                             </div>
 
-                            <button className="bg-primary text-center rounded-xl shadow-xl p-2 m-2 hover:bg-primary-600 duration-200 w-full" onClick={handleSubmit}>
+                            <div className="text-lg pl-2 text-error">
+                                {error}
+                            </div>
+
+                            <button
+                                className="bg-primary text-center rounded-xl shadow-xl p-2 m-2 hover:bg-primary-600 duration-200 w-full"
+                                onClick={handleSubmit}>
                                 Login
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

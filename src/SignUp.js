@@ -64,9 +64,12 @@ export default function SignUp() {
                         </div>
 
                         <form onSubmit={handleSubmit}>
-                            <InputField id="first_name" label="First Name" placeholder="John" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
-                            <InputField id="last_name" label="Surname" placeholder="Smith" value={surname} onChange={(e) => setLastName(e.target.value)} />
-                            <InputField id="email" label="Email Address" placeholder="someone@example.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <InputField id="first_name" label="First Name" placeholder="John" value={firstname}
+                                        onChange={(e) => setFirstName(e.target.value)}/>
+                            <InputField id="last_name" label="Surname" placeholder="Smith" value={surname}
+                                        onChange={(e) => setLastName(e.target.value)}/>
+                            <InputField id="email" label="Email Address" placeholder="someone@example.com" type="email"
+                                        value={email} onChange={(e) => setEmail(e.target.value)}/>
                             <InputField
                                 id="password"
                                 label="Password"
@@ -90,14 +93,20 @@ export default function SignUp() {
                                 Already have an account? <a href="/login" className="text-[#0000ee]">Login</a>
                             </div>
 
-                            <button className="bg-primary text-center rounded-xl shadow-xl p-2 m-2 hover:bg-primary-600 duration-200 w-full" onClick={handleSubmit}>
+                            <div className="text-lg pl-2 text-error">
+                                {error}
+                            </div>
+
+                            <button
+                                className="bg-primary text-center rounded-xl shadow-xl p-2 m-2 hover:bg-primary-600 duration-200 w-full"
+                                onClick={handleSubmit}>
                                 Create Account
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
