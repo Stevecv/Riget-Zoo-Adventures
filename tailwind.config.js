@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -91,6 +91,8 @@ module.exports = {
         800: "#3E3E3E",
         900: "#292929",
       },
+
+      "error": "#ff3333",
 
       'black': '#111111',
       'white': '#ffffff',

@@ -35,7 +35,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="space-x-6 p-5">
-                    <a href="#">Login</a>
+                    <a href="/login">Login</a>
                     <a href="sign-up">Sign up</a>
                     <a href="#" className="bg-primary p-2 rounded-xl">Tickets</a>
                 </div>
@@ -60,9 +60,9 @@ const Navbar = () => {
                    onClick={toggleOpen}>Hotel booking</a>
                 <a href="#our-animals" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Our Animals</a>
-                <a href="#" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
+                <a href="/login" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Login</a>
-                <a href="#" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
+                <a href="/sign-up" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Sign up</a>
                 <a href="#" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Tickets</a>
