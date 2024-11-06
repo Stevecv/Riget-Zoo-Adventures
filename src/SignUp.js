@@ -2,6 +2,7 @@ import InputField from "./components/InputField";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function SignUp() {
     const [firstname, setFirstName] = useState('');
@@ -10,6 +11,7 @@ export default function SignUp() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -44,6 +46,7 @@ export default function SignUp() {
                 }
 
                 const result = await response.json();
+                navigate("/login")
                 console.log('User registered successfully:', result);
             } catch (error) {
                 console.error('Error:', error);

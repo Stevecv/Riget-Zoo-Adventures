@@ -4,11 +4,14 @@ import Footer from "./Footer";
 import {useState} from "react";
 import App from "./App";
 import UserProfile from "./UserProfile";
+import {useNavigate} from "react-router-dom";
+import Cookies from 'js-cookie';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,6 +41,10 @@ export default function Login() {
 
             UserProfile.setEmail(email);
             UserProfile.setPassword(password);
+            navigate("/")
+            Cookies.set('email', email, { expires: 7 });
+            Cookies.set('password', password, { expires: 7 });
+
             console.log('User logged in successfully:', result);
         } catch (error) {
             console.error('Error:', error);
@@ -53,7 +60,7 @@ export default function Login() {
                 <div className="flex-grow flex items-center justify-center ">
                     <div className="bg-background-100 w-96 h-fit rounded-xl shadow-xl p-5 text-2xl">
                         <div className="text-3xl w-full text-center">
-                            Sign up
+                            Login
                         </div>
 
                         <form onSubmit={handleSubmit}>
