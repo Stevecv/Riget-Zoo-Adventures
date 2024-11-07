@@ -51,6 +51,45 @@ export default function ZooBooking() {
         }
     };
 
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const getIsLoggedIn = async () => {
+        let email = Cookies.get('email');
+        let password = Cookies.get('password');
+
+        console.log(email + " // " + password)
+
+        const userData = {
+            email,
+            password,
+        };
+
+        try {
+            const response = await fetch('http://127.0.0.1:8001/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
+
+            return response.ok;
+        } catch (exception) {
+
+        }
+
+        return false;
+    }
+
+
+    const checkChange = async () => {
+        const a = await getIsLoggedIn();
+        if (!a) {
+            navigate('/login');
+        }
+    }
+
+    checkChange().then(r => {})
+
     return (
         <div className="max-w-screen overflow-x-hidden">
             <div className="bg-background-400 w-screen h-screen flex flex-col">
