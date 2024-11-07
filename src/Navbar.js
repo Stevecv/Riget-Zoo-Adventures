@@ -76,8 +76,8 @@ const Navbar = () => {
                 className="bg-black text-background h-15 items-center w-full justify-between sticky top-0 z-50 pl-5 hidden lg:flex p-1">
                 <div className="space-x-6">
                     <a href="/" className="h-10">Home</a>
-                    <a href="#" className="h-10">Book tickets</a>
-                    <a href="#" className="h-10">Hotel booking</a>
+                    <a href="/zoobooking" className="h-10">Book tickets</a>
+                    <a href="/hotelbooking" className="h-10">Hotel booking</a>
                     <a href="/#our-animals" className="h-10">Our Animals</a>
                 </div>
 
@@ -85,13 +85,13 @@ const Navbar = () => {
                     {isLoggedIn ?(
                         <div className="space-x-6">
                             <a href="/logout">Logout</a>
-                            <a href="#" className="bg-primary p-2 rounded-xl">Tickets</a>
+                            <a href="/tickets" className="bg-primary p-2 rounded-xl">Tickets</a>
                         </div>
                     ) : (
                         <div className="space-x-6">
                             <a href="/login">Login</a>
                             <a href="/sign-up">Sign up</a>
-                            <a href="#" className="bg-primary p-2 rounded-xl">Tickets</a>
+                            <a href="/tickets" className="bg-primary p-2 rounded-xl">Tickets</a>
                         </div>
                     )}
                 </div>
@@ -131,7 +131,7 @@ const Navbar = () => {
                     </div>
                 )}
 
-                <a href="#" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
+                <a href="/tickets" className="p-4 text-3xl hover:text-4xl w-[100%] hover:text-gray duration-200"
                    onClick={toggleOpen}>Tickets</a>
             </Menu>
         </div>
