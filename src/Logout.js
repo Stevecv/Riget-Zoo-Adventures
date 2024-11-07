@@ -22,17 +22,17 @@ export default function Logout() {
                 <Navbar />
 
                 <div className="flex-grow flex items-center justify-center ">
-                    <div className="bg-background-100 w-96 h-fit rounded-xl shadow-xl p-5 text-2xl">
+                    <div className="bg-background-100 w-96 h-fit rounded-xl shadow-xl p-5 text-2xl p-10">
                         <div className="text-3xl w-full text-center">
                             Are you sure you want to logout?
                         </div>
 
                         <div className="p-5 justify-center w-full flex">
-                            <button onClick={logout} className="bg-error p-3 m-3 rounded-xl shadow-xl">
+                            <button onClick={logout} className="bg-error p-3 m-3 rounded-xl shadow-xl hover:scale-105 duration-200">
                                 Confirm
                             </button>
 
-                            <a href="/" className="bg-grey-200 p-3 m-3 rounded-xl shadow-xl">
+                            <a href="/" className="bg-grey-200 p-3 m-3 rounded-xl shadow-xl hover:scale-105 duration-200">
                                 Cancel
                             </a>
                         </div>
