@@ -100,7 +100,9 @@ export default function HotelBooking() {
                 <Navbar />
 
 
-                <HotelRoom />
+                <HotelRoom name="King sized" sleepsAmount="2" price={"£42"}/>
+                <HotelRoom name="Queen sized" sleepsAmount="2" price={"£36"}/>
+                <HotelRoom name="Double-Double" sleepsAmount="4" price={"£64"}/>
             </div>
             <Footer/>
         </div>

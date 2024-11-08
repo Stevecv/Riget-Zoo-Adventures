@@ -67,11 +67,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex justify-center items-center w-full pb-10 gap-5 flex-col md:flex-row">
-                    <Link to="\opening-times"
+                    <a href="#opening-times"
                           className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
                         <FontAwesomeIcon icon={faClock} className="fa-xl pr-5"/>
                         <div className="text-xl">Open from 10am</div>
-                    </Link>
+                    </a>
 
                     <Link to="/accessability"
                           className="bg-primary text-white flex  justify-center items-center text-background w-96 p-5 rounded-xl hover:scale-105 duration-200">
