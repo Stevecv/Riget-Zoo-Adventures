@@ -77,7 +77,7 @@ export default function Login() {
                             />
 
                             <div className="text-sm pl-2">
-                                Don't have an account? <a href="/register" className="text-[#0000ee]">Register</a>
+                                Don't have an account? <a href="/sign_up" className="text-[#0000ee]">Register</a>
                             </div>
 
                             <div className="text-lg pl-2 text-error">
