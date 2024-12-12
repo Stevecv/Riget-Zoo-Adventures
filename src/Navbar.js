@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { slide as Menu } from 'react-burger-menu'
 import Cookies from "js-cookie";
 import LogoutPopup from "./components/LogoutPopup";
+import {getIsLoggedIn} from "./utils";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,33 +13,6 @@ const Navbar = () => {
     const [showConfirm, setShowConfirm] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [logoutPopupIsOpen, setLogoutPopupIsOpen] = useState(false);
-    const getIsLoggedIn = async () => {
-        let email = Cookies.get('email');
-        let password = Cookies.get('password');
-
-        console.log(email + " // " + password)
-
-        const userData = {
-            email,
-            password,
-        };
-
-        try {
-            const response = await fetch('http://127.0.0.1:8001/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(userData),
-            });
-
-            return response.ok;
-        } catch (exception) {
-
-        }
-
-        return false;
-    }
 
     const checkIsLoggedIn = async () => {
         const a = await getIsLoggedIn();

@@ -1,6 +1,7 @@
 var UserProfile = (function() {
     var email = "";
     var password = "";
+    var authToken = "";
 
     var getEmail = function() {
         return email;
@@ -18,11 +19,21 @@ var UserProfile = (function() {
         this.password = password;
     };
 
+    var getAuthToken = function() {
+        return authToken;
+    }
+
+    var setAuthToken = function(token) {
+        this.authToken = token;
+    }
+
     return {
         getEmail: getEmail,
         setEmail: setEmail,
         getPassword: getPassword,
-        setPassword: setPassword
+        setPassword: setPassword,
+        getAuthToken: getAuthToken,
+        setAuthToken: setAuthToken,
     }
 
 })();

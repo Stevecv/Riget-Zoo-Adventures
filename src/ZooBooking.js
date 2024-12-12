@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import Navbar from "./Navbar";
 import InputField from "./components/InputField";
 import Footer from "./Footer";
+import {getIsLoggedIn} from "./utils";
 
 export default function ZooBooking() {
     const [email, setEmail] = useState('');
@@ -52,33 +53,6 @@ export default function ZooBooking() {
     };
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const getIsLoggedIn = async () => {
-        let email = Cookies.get('email');
-        let password = Cookies.get('password');
-
-        console.log(email + " // " + password)
-
-        const userData = {
-            email,
-            password,
-        };
-
-        try {
-            const response = await fetch('http://127.0.0.1:8001/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(userData),
-            });
-
-            return response.ok;
-        } catch (exception) {
-
-        }
-
-        return false;
-    }
 
 
     const checkChange = async () => {

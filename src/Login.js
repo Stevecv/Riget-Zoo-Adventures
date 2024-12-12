@@ -30,6 +30,7 @@ export default function Login() {
                 },
                 body: JSON.stringify(userData),
             });
+            const result = await response.json();
 
             if (!response.ok) {
                 const errorData = await response.json();
@@ -37,13 +38,14 @@ export default function Login() {
                 console.log(errorData.detail || 'Error logging in')
                 return;
             }
-            const result = await response.json();
 
+            var authToken = result.token;
             UserProfile.setEmail(email);
-            UserProfile.setPassword(password);
+            UserProfile.setAuthToken(authToken);
+
             navigate("/")
             Cookies.set('email', email, { expires: 7 });
-            Cookies.set('password', password, { expires: 7 });
+            Cookies.set('authToken', authToken, { expires: 7 });
 
             console.log('User logged in successfully:', result);
         } catch (error) {
