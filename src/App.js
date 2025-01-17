@@ -7,6 +7,8 @@ import Logout from "./Logout";
 import TicketsChoice from "./TicketsChoice";
 import ZooBooking from "./ZooBooking";
 import HotelBooking from "./HotelBooking";
+import ResetPasswordRequest from "./ResetPasswordRequest";
+import ResetPassword from "./ResetPassword";
 
 function ButtonLink({ to, children }) {
     return <link to={to}><button>{children}</button></link>;
@@ -19,6 +21,8 @@ function App() {
               <Route index element={<Home />} />
               <Route path="sign-up" element={<SignUp />} />
               <Route path="login" element={<Login />} />
+              <Route path="request-password-reset" element={<ResetPasswordRequest />} />
+              <Route path="change-password" element={<ResetPassword />} />
               <Route path="logout" element={<Logout />} />
               <Route path="tickets" element={<TicketsChoice />} />
               <Route path="zoobooking" element={<ZooBooking />} />
